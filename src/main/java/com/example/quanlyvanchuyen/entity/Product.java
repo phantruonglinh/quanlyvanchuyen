@@ -23,7 +23,7 @@ public class Product {
     private String unitPrice;
 
     @Column(name = "unitsInStock")
-    private String unitsInStock;
+    private int unitsInStock;
 
     @ManyToOne
     @JoinColumn(name = "categoryID")
