@@ -25,6 +25,9 @@ public class TransportVehicle {
     @Column(name = "vehicleType")
     private String vehicleType;
 
+    @Column(name = "status")
+    private String status;
+
     @OneToMany(mappedBy = "transportVehicle")
     private List<Order> orders;
 
