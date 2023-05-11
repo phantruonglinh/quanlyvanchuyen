@@ -29,7 +29,8 @@ public class Product {
     @JoinColumn(name = "categoryID")
     private Category category;
 
-    @OneToOne(mappedBy = "product")
+    @ManyToOne
+    @JoinColumn(name = "orderDetailID")
     private OrderDetail orderDetail;
 
 

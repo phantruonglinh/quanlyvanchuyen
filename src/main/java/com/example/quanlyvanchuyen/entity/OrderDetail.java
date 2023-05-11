@@ -26,9 +26,9 @@ public class OrderDetail {
     @JoinColumn(name = "orderID")
     private Order order;
 
-    @OneToOne
-    @JoinColumn(name = "productID")
-    private Product product;
+    @OneToMany(mappedBy = "orderDetail")
+    private List<Product> products;
+
 
     @OneToMany(mappedBy = "orderDetail")
     private List<Payment> payments;
