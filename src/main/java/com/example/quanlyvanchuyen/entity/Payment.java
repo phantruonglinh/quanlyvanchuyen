@@ -29,4 +29,9 @@ public class Payment {
     @ManyToOne
     @JoinColumn(name = "orderDetail")
     private OrderDetail orderDetail;
+
+    @ManyToOne
+    @JoinColumn(name = "orders")
+    private Order order;
+
 }

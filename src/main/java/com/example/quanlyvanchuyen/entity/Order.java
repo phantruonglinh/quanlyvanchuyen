@@ -36,15 +36,14 @@ public class Order {
     private Customer customer;
 
     @ManyToOne
-    @JoinColumn(name = "paymentMethodID")
-    private PaymentMethod paymentMethod;
-
-    @ManyToOne
     @JoinColumn(name = "transportVehicle")
     private TransportVehicle transportVehicle;
 
     @ManyToOne
     @JoinColumn(name = "warehouse")
     private Warehouse warehouse;
+
+    @OneToMany(mappedBy = "paymentID")
+    private List <Payment> payment;
 
 }
