@@ -16,5 +16,6 @@ public class Orderdto {
     private String orderStatus;
 
     private String totalAmount;
+
     private Long customerID;
 }
